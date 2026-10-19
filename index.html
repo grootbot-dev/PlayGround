@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#7ec0ee" />
+    <title>Minecraft 3D</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%237ec34b'/></svg>" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game"></canvas>
+
+      <div id="crosshair" aria-hidden="true"></div>
+
+      <div id="hud">
+        <div id="stats"></div>
+        <div id="hotbar" role="toolbar" aria-label="Block selection"></div>
+      </div>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <h1>MINECRAFT<span>3D</span></h1>
+          <p class="tagline">An infinite voxel world in your browser</p>
+          <button id="play" type="button">Play</button>
+          <div class="controls">
+            <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move</div>
+            <div><kbd>Space</kbd> Jump &nbsp; <kbd>Shift</kbd> Sneak</div>
+            <div><kbd>Left&nbsp;Click</kbd> Break &nbsp; <kbd>Right&nbsp;Click</kbd> Place</div>
+            <div><kbd>1</kbd>–<kbd>9</kbd> / <kbd>Wheel</kbd> Blocks &nbsp; <kbd>E</kbd> Palette</div>
+            <div><kbd>F</kbd> Fly &nbsp; <kbd>T</kbd> Time &nbsp; <kbd>Esc</kbd> Pause</div>
+          </div>
+          <p class="hint">Click Play, then click the world to lock the mouse.</p>
+        </div>
+      </div>
+
+      <div id="pause" class="overlay hidden">
+        <div class="panel small">
+          <h2>Paused</h2>
+          <button id="resume" type="button">Resume</button>
+          <p class="hint">Press <kbd>Esc</kbd> or click Resume to continue</p>
+        </div>
+      </div>
+
+      <div id="palette" class="overlay hidden">
+        <div class="panel medium">
+          <h2>Block Palette</h2>
+          <div id="paletteGrid"></div>
+          <p class="hint">Press <kbd>E</kbd> to close</p>
+        </div>
+      </div>
+
+      <div id="toast"></div>
+      <div id="loading"><div class="spinner"></div><span>Generating world…</span></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
